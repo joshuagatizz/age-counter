@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
 // eslint-disable-next-line react/prop-types
-export default function Age({editCountDown}) {
+export default function Age({editCountDown, birthDate}) {
   function calculateAge() {
     const today = new Date();
     let age = today.getFullYear() - birthDate.getFullYear();
@@ -21,11 +21,9 @@ export default function Age({editCountDown}) {
     editCountDown(Math.ceil(diff/(1000 * 60 * 60 * 24)));
   }
 
-  const birthDate = new Date("2002-09-11");
   let lastBirthday = new Date(birthDate);
   let nextBirthday = new Date(birthDate);
-  const age = calculateAge();
-  const [counter, setCounter] = useState(age);
+  const [counter, setCounter] = useState(calculateAge());
 
   function isTodayBirthday() {
     const today = new Date();
@@ -45,7 +43,7 @@ export default function Age({editCountDown}) {
       const lastBirthdayTime = lastBirthday.getTime();
       const todayTime = new Date().getTime() - lastBirthdayTime;
       const nextBirthdayTime = nextBirthday.getTime() - lastBirthdayTime;
-      setCounter(Number((Math.floor(counter) + (todayTime/nextBirthdayTime)).toFixed(10)));
+      setCounter(Number((calculateAge() + (todayTime/nextBirthdayTime)).toFixed(10)));
     }, 50);
     return () => clearInterval(interval);
   });

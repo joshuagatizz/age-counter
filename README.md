@@ -1,8 +1,11 @@
-# React + Vite
+# Age Counter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application, built with React.js, Vite, and Tailwind CSS, 
+accurately displays your age with up to 10 digits of precision.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To use this app, simply clone this repo and run:
+```cmd
+npm install
+npm run dev
+```
+You should then be able to view the app on http://localhost:5173/age-counter/.

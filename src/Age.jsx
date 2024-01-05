@@ -50,7 +50,7 @@ export default function Age({editCountDown, birthDate}) {
 
   return (
     <>
-      <p className="font-extrabold text-purple-400 lg:text-8xl md:text-6xl">{counter}</p>
+      <p className="font-extrabold text-purple-400 text-8xl px-4">{counter}</p>
     </>
   )
 }
